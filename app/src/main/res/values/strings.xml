@@ -36,5 +36,9 @@
     <string name="dashboard">Dashboard</string>
     <string name="conferma">Conferma</string>
     <string name="logout">Logout</string>
+    <string name="name">Name</string>
+    <string name="cognomeSt">Cognome</string>
+    <string name="name_student">Name Student</string>
+    <string name="mitch_tabian">Mitch Tabian</string>
 
 </resources>

@@ -15,6 +15,8 @@ class DashboardStudente : AppCompatActivity() {
         val binding = ActivityDashboardStudenteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        title= "Dashboard Studente"
+
         val ButtonProfilo = binding.DashboardProfiloStudente
         val EmailUser = intent.getStringExtra("EXTRA_SESSION_ID")
         Log.d("AAAAAA", EmailUser.toString())

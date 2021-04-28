@@ -22,6 +22,8 @@ class Profilo : AppCompatActivity() {
         setContentView(binding.root)
         val db = DbPresenze.getDatabase(this@Profilo)
 
+        title = "Profile"
+
         val dashboard = binding.Backdashboard
         val modifica = binding.Modificabutton
 
@@ -54,10 +56,11 @@ class Profilo : AppCompatActivity() {
                 val n: String = nome.text.toString()
                 val c: String = cognome.text.toString()
                 val p: String = password.text.toString()
+                val r: String = reppassword.text.toString()
                 Log.d("ci", n)
                 Log.d("ci", c)
                 Log.d("ci", p)
-                if (validPassword(passwordDB, password.toString(), reppassword.toString(), it)) {
+                if (validPassword(passwordDB, p, r, it)) {
                     GlobalScope.launch {
                         Log.d("ci", "update")
                         db.userDao().update(
@@ -67,6 +70,18 @@ class Profilo : AppCompatActivity() {
                             passwordU = p,
                         )
                     }
+                }else{
+                    GlobalScope.launch {
+                        Log.d("ci", "update")
+                        db.userDao().update(
+                            id = id,
+                            nomeU = n,
+                            cognomeU = c,
+                            passwordU = passwordDB,
+                        )
+                    }
+
+
                 }
             }
         }
@@ -83,11 +98,17 @@ class Profilo : AppCompatActivity() {
         view: View
     ): Boolean {
 
-        if (password.length > 5 && repPassword == password && password != passwordDb) {
-            view.snack("Password Corta o Uguale")
-            return false
+        Log.d("ciiccc",password)
+        if (password.length > 5 && repPassword == password && password != passwordDb ) {
+
+            return true
         }
-        return true
+        if(password.isEmpty()){
+            return true
+        }
+
+        view.snack("Password Errata")
+        return false
     }
 
 

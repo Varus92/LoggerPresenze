@@ -20,7 +20,7 @@ class PresenzeStudenti : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityPresenzeStudentiBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        title= "Presenze Studenti"
         var conferma = binding.RegisterLesson
         var dashboard = binding.buttonBackDashboard
 

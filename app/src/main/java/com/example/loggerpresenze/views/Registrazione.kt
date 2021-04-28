@@ -26,6 +26,7 @@ class Registrazione : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityRegistrazioneBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        title = "Registrazione"
 
         GlobalScope.launch(Dispatchers.IO) {
             val db = DbPresenze.getDatabase(this@Registrazione)

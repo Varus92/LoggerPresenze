@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -13,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.loggerpresenze"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -39,6 +40,7 @@ android {
 apply plugin: 'kotlin-kapt'
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
@@ -61,7 +63,19 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
-
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+
+// Card View
+    def cardview_version = "1.0.0"
+    implementation "androidx.cardview:cardview:$cardview_version"
+
+    // Recyclerview
+    def recyclerview_version = "1.0.0"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    //glide
+    def glide_version = "4.8.0"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 
 }
