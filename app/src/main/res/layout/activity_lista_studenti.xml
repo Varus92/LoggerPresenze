@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ListaStudenti">
+
+    <TextView
+        android:id="@+id/ListaStudenti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/lista_studenti"
+        android:textColor="#FFC107"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TextMateria"
+        android:layout_width="86dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/Materia"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/ListaStudMateria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListaStudenti" />
+
+    <TextView
+        android:id="@+id/ListaStudMateria"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextMateria"
+        app:layout_constraintTop_toBottomOf="@+id/ListaStudenti" />
+
+    <ListView
+        android:id="@+id/StudentiView"
+        android:layout_width="333dp"
+        android:layout_height="479dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextMateria">
+
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Registro Presenze</string>
+    <string name="Textlogin">Login</string>
+    <string name="emailR">Email</string>
+    <string name="passwordR">Password</string>
+    <string name="login">Login</string>
+    <string name="registrazioneR">Registrazione</string>
+    <string name="registrazione">Registrazione</string>
+    <string name="nomeR">Nome</string>
+    <string name="cognomeR">Cognome</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_passwordR">Repeat Password</string>
+    <string name="android">Android</string>
+    <string name="ios">Ios</string>
+    <string name="materia">Materia</string>
+    <string name="docente">docente</string>
+    <string name="studente">studente</string>
+    <string name="Ruolo">Ruolo</string>
+    <string name="registrazioneCompletata">Registrazione</string>
+    <string name="modifica">Modifica</string>
+    <string name="nome">Nome</string>
+    <string name="cognome">Cognome</string>
+    <string name="emailP">Email</string>
+    <string name="passwordP">Password</string>
+    <string name="profilo">Profilo</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="studente_dashboard">Studente Dashboard</string>
+    <string name="profilo_studente">Profilo Studente</string>
+    <string name="lista_studenti">Lista Studenti</string>
+    <string name="Materia">Materia</string>
+    <string name="studenti">Studenti</string>
+    <string name="profiloD">Profilo</string>
+    <string name="nuova_lezione">Nuova Lezione</string>
+    <string name="data">Data</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="conferma">Conferma</string>
+    <string name="logout">Logout</string>
+
+</resources>

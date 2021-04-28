@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.Profilo">
+
+
+    <ImageView
+        android:id="@+id/logo_profilo"
+        android:layout_width="71dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/profilo"
+        android:src="@drawable/ic_profilo"
+        app:layout_constraintBottom_toTopOf="@+id/NomeProfilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NomeProfilo"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/nome"
+        app:layout_constraintBottom_toTopOf="@+id/PersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_profilo" />
+
+    <TextView
+        android:id="@+id/Cognome_Profilo"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/cognome"
+        app:layout_constraintBottom_toTopOf="@+id/CognomeProfiloEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PersonName" />
+
+    <TextView
+
+        android:id="@+id/EmailProfile"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ChangePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email_Profile" />
+
+    <EditText
+        android:id="@+id/PersonName"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Cognome_Profilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomeProfilo" />
+
+    <TextView
+        android:id="@+id/ChangePassword"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/passwordP"
+        app:layout_constraintBottom_toTopOf="@+id/ChangePasswordText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailProfile" />
+
+    <TextView
+        android:id="@+id/RepeatPasswordProfile"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/repeat_password"
+        app:layout_constraintBottom_toTopOf="@+id/ChangePasswordRepeatText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangePasswordText" />
+
+    <EditText
+        android:id="@+id/ChangePasswordText"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/RepeatPasswordProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChangePassword" />
+
+    <TextView
+        android:id="@+id/Email_Profile"
+        android:layout_width="220dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/emailP"
+        app:layout_constraintBottom_toTopOf="@+id/EmailProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CognomeProfiloEdit" />
+
+    <EditText
+        android:id="@+id/ChangePasswordRepeatText"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="131dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/Modificabutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RepeatPasswordProfile" />
+
+    <Button
+        android:id="@+id/Modificabutton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="45dp"
+        android:text="@string/modifica"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Backdashboard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/CognomeProfiloEdit"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="1dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Email_Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cognome_Profilo" />
+
+    <Button
+        android:id="@+id/Backdashboard"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="45dp"
+        android:text="dashboard"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Modificabutton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

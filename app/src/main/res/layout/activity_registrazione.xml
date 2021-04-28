@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ErrorRegistrazione"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.Registrazione">
+
+    <TextView
+        android:id="@+id/TextRegistrazione"
+        android:layout_width="222dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/registrazioneR"
+        android:textColor="#FF5722"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="107dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/nomeR"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextRegistrazione" />
+
+    <EditText
+        android:id="@+id/Cognome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="107dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/cognomeR"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nome" />
+
+    <EditText
+        android:id="@+id/EmailRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="107dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/emailR"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cognome" />
+
+    <EditText
+        android:id="@+id/PasswordRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="106dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/passwordR"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailRegister" />
+
+    <EditText
+        android:id="@+id/RepeatPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="109dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/repeat_passwordR"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordRegister" />
+
+    <LinearLayout
+        android:id="@+id/checkboxes_Materia"
+        android:layout_width="283dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="74dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RepeatPassword">
+
+        <TextView
+            android:id="@+id/genere_regitrazione"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="serif"
+            android:text="@string/materia"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_ios"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/ios"
+                tools:text="Ios" />
+
+            <RadioButton
+                android:id="@+id/Android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/android" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkboxes_Ruolo"
+        android:layout_width="291dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxes_Materia">
+
+        <TextView
+            android:id="@+id/ruolo_regitrazione"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/Ruolo"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="538dp" />
+
+        <RadioGroup
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_studente"
+                android:layout_width="102dp"
+                android:layout_height="match_parent"
+                android:text="@string/studente"
+                tools:layout_editor_absoluteX="141dp"
+                tools:layout_editor_absoluteY="538dp"
+                tools:text="Studente" />
+
+            <RadioButton
+                android:id="@+id/radio_docente"
+                android:layout_width="102dp"
+                android:layout_height="match_parent"
+                android:text="@string/docente"
+                tools:layout_editor_absoluteX="237dp"
+                tools:layout_editor_absoluteY="538dp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Registrazione_Completata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/registrazioneCompletata"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxes_Ruolo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Registrazione_Completata"
+        app:layout_constraintVertical_bias="1.0">
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
