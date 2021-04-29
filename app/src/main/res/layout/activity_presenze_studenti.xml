@@ -30,14 +30,14 @@
         android:layout_width="164dp"
         android:layout_height="49dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/dashboard"
+        app:backgroundTint="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/RegisterLesson"
-        app:layout_constraintTop_toBottomOf="@+id/AssenzaStudentiLista" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/RegisterLesson" />
 
     <Button
         android:id="@+id/RegisterLesson"
@@ -47,6 +47,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginBottom="27dp"
         android:text="@string/conferma"
+        app:backgroundTint="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AssenzaStudentiLista" />

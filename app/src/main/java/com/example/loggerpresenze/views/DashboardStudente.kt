@@ -35,9 +35,9 @@ class DashboardStudente : AppCompatActivity() {
 
             val assenze = db.lezioniDao().numeroAssenze(User[0].idUser)
             val numerolezioni = db.lezioniDao().numeroLezioni(User[0].materia)
-
             binding.textView6.setText(assenze.toString())
-           binding.textView8.setText(numerolezioni.toString())
+            val lezioniTot = numerolezioni - assenze
+            binding.textView8.setText(lezioniTot.toString())
 
             // Lookup the recyclerview in activity layout
             val rvContacts = findViewById<View>(R.id.ListaAssenzeStudente) as RecyclerView

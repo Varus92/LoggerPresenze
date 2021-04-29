@@ -26,8 +26,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -53,26 +51,24 @@
         android:id="@+id/textView5"
         android:layout_width="131dp"
         android:layout_height="27dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="72dp"
         android:text="Totale Assenze"
-        app:layout_constraintBottom_toTopOf="@+id/DashboardProfiloStudente"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListaAssenzeStudente" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="114dp"
         android:layout_height="28dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="103dp"
         android:hint="num"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/ListaAssenzeStudente"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ListaAssenzeStudente" />
 
     <TextView
         android:id="@+id/textView7"
@@ -91,12 +87,14 @@
         android:id="@+id/textView8"
         android:layout_width="115dp"
         android:layout_height="25dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="42dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/DashboardProfiloStudente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.571" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
