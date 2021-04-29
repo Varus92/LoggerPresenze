@@ -40,5 +40,9 @@
     <string name="cognomeSt">Cognome</string>
     <string name="name_student">Name Student</string>
     <string name="mitch_tabian">Mitch Tabian</string>
+    <string name="nomeAssenza">nome</string>
+    <string name="cognomeAssenza">cognome</string>
+    <string name="assente">Assente</string>
+    <string name="lezione">Lezione</string>
 
 </resources>

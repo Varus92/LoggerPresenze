@@ -9,6 +9,7 @@ import com.example.loggerpresenze.R
 import com.example.presenze.model.EntityUser
 
 
+/*
 class CustomAdapter(val userList: List<EntityUser>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     //this method is returning the view for each item in the list
@@ -38,3 +39,4 @@ class CustomAdapter(val userList: List<EntityUser>) : RecyclerView.Adapter<Custo
         }
     }
 }
+*/

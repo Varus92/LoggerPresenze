@@ -19,22 +19,25 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*      GlobalScope.launch(Dispatchers.IO) {
+        /*
+           GlobalScope.launch(Dispatchers.IO) {
                   val db = DbPresenze.getDatabase(this@MainActivity)
-                  db.docenteDao().insert(
-                      EntityDocenti(
-                          nome = "flavio",
-                          cognome = "Spano'",
-                          email = "Flavio@gmail.com",
-                          password = "ciao123",
-                          ruolo = "Studente",
-                          materia = "ANDROID"
-                      )
-                  )
+               db.lezioniDao().deleteByUserId(11)
 
+               /*          db.docenteDao().insert(
+                          EntityDocenti(
+                              nome = "flavio",
+                              cognome = "Spano'",
+                              email = "Flavio@gmail.com",
+                              password = "ciao123",
+                              ruolo = "Studente",
+                              materia = "ANDROID"
+                          )
+                      )
+     */
 
               }
-      */
+*/
 
         GlobalScope.launch(Dispatchers.IO) {
 

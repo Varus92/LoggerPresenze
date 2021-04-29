@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/container1"
-        android:layout_width="288dp"
-        android:layout_height="59dp"
+        android:layout_width="366dp"
+        android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -23,24 +22,24 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/ListaNomeStudente"
-            android:layout_width="120dp"
+            android:id="@+id/ListaNomeStudenteA"
+            android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:hint="nome" />
 
         <TextView
-            android:id="@+id/CognomeListaStudente"
-            android:layout_width="101dp"
+            android:id="@+id/CognomeListaStudenteA"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="cognome" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="0dp"
-            android:layout_height="22dp"
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_delete" />
+            android:text="@string/assente" />
 
     </LinearLayout>
 

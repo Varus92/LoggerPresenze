@@ -5,10 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.loggerpresenze.ContactsAdapter
 import com.example.loggerpresenze.R
 import com.example.loggerpresenze.databinding.ActivityListaStudentiBinding
 import com.example.presenze.db.DbPresenze
@@ -18,10 +18,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-
+/*
 class ListaStudenti : AppCompatActivity() {
 
-    private lateinit var listStudentAdapter: CustomAdapter
+    //private lateinit var listStudentAdapter: CustomAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,18 +42,32 @@ class ListaStudenti : AppCompatActivity() {
 
             Log.d("hhhh", student.toString())
 
-            //getting recyclerview from xml
-            val recyclerView = findViewById(R.id.recyclerView) as? RecyclerView
+            // Lookup the recyclerview in activity layout
+            val rvContacts = findViewById<View>(R.id.rvContacts) as RecyclerView
 
-            //adding a layoutmanager
-            //recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
-            //creating our adapter
-            val adapter = CustomAdapter(student)
+            // Create adapter passing in the sample user data
+            val adapter = ContactsAdapter(student)
+            // Attach the adapter to the recyclerview to populate items
+            // Attach the adapter to the recyclerview to populate items
+            rvContacts.adapter = adapter
+            // Set layout manager to position the items
+            // Set layout manager to position the items
+            rvContacts.layoutManager = LinearLayoutManager(this@ListaStudenti)
+            // That's all!
 
-            //now adding the adapter to recyclerview
-            if (recyclerView != null) {
-                recyclerView.adapter = adapter
-            }
+
+//            //getting recyclerview from xml
+//            val recyclerView = findViewById(R.id.recyclerView) as? RecyclerView
+//
+//            //adding a layoutmanager
+//            //recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
+//            //creating our adapter
+//            val adapter = CustomAdapter(student)
+//
+//            //now adding the adapter to recyclerview
+//            if (recyclerView != null) {
+//                recyclerView.adapter = adapter
+//            }
 
 
 
@@ -102,3 +116,4 @@ class ListaStudenti : AppCompatActivity() {
     }
 
 }
+*/

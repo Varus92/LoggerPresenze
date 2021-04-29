@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ListaLezioniDocente"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="0dp"
@@ -10,9 +10,9 @@
 
 
     <LinearLayout
-        android:id="@+id/container1"
-        android:layout_width="288dp"
-        android:layout_height="59dp"
+        android:id="@+id/container2"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
@@ -23,24 +23,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/ListaNomeStudente"
-            android:layout_width="120dp"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="nome" />
+            android:layout_weight="1"
+            android:text="Lezione" />
 
         <TextView
-            android:id="@+id/CognomeListaStudente"
-            android:layout_width="101dp"
+            android:id="@+id/ListaLezionoA"
+            android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="cognome" />
+            android:hint="@string/lezione" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="0dp"
-            android:layout_height="22dp"
-            android:layout_weight="1"
-            app:srcCompat="@android:drawable/ic_delete" />
 
     </LinearLayout>
 

@@ -14,10 +14,12 @@
         android:layout_marginStart="107dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="107dp"
+        android:layout_marginBottom="35dp"
         android:text="@string/nuova_lezione"
         android:textColor="#FF9800"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,22 +30,26 @@
         android:layout_width="164dp"
         android:layout_height="49dp"
         android:layout_marginStart="33dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="27dp"
         android:text="@string/dashboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/RegisterLesson" />
+        app:layout_constraintStart_toEndOf="@+id/RegisterLesson"
+        app:layout_constraintTop_toBottomOf="@+id/AssenzaStudentiLista" />
 
     <Button
         android:id="@+id/RegisterLesson"
         android:layout_width="164dp"
         android:layout_height="49dp"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="27dp"
         android:text="@string/conferma"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AssenzaStudentiLista" />
 
     <TextView
         android:id="@+id/Date"
@@ -52,16 +58,18 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="42dp"
+        android:layout_marginBottom="55dp"
         android:text="Data"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/AssenzaStudentiLista"
         app:layout_constraintEnd_toStartOf="@+id/editTextDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="46dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="50dp"
@@ -71,4 +79,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Date"
         app:layout_constraintTop_toBottomOf="@+id/NewLesson" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/AssenzaStudentiLista"
+        android:layout_width="378dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBackDashboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,13 @@
 package com.example.loggerpresenze.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import com.example.loggerpresenze.R
 import com.example.loggerpresenze.databinding.ActivityProfiloBinding
 import com.example.loggerpresenze.utilities.transizioneRegistrati
 import com.example.loggerpresenze.utilities.transizioneToLogin
@@ -41,9 +45,13 @@ class Profilo : AppCompatActivity() {
 
             dashboard.setOnClickListener {
                 if (User[0].ruolo.equals("Studente")) {
-                    transizioneToLoginStudente(this@Profilo)
+                    val intent = Intent(baseContext, DashboardStudente::class.java)
+                    intent.putExtra("EXTRA_SESSION_ID",EmailUser )
+                    startActivity(intent)
                 } else {
-                    transizioneToLogin(this@Profilo)  // profile docenti
+                    val intent = Intent(baseContext, Dashboard::class.java)
+                    intent.putExtra("EXTRA_SESSION_ID",EmailUser )
+                    startActivity(intent)
                 }
             }
             modifica.setOnClickListener {
@@ -57,9 +65,6 @@ class Profilo : AppCompatActivity() {
                 val c: String = cognome.text.toString()
                 val p: String = password.text.toString()
                 val r: String = reppassword.text.toString()
-                Log.d("ci", n)
-                Log.d("ci", c)
-                Log.d("ci", p)
                 if (validPassword(passwordDB, p, r, it)) {
                     GlobalScope.launch {
                         Log.d("ci", "update")
@@ -98,7 +103,7 @@ class Profilo : AppCompatActivity() {
         view: View
     ): Boolean {
 
-        Log.d("ciiccc",password)
+
         if (password.length > 5 && repPassword == password && password != passwordDb ) {
 
             return true
@@ -110,6 +115,29 @@ class Profilo : AppCompatActivity() {
         view.snack("Password Errata")
         return false
     }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
+        menuInflater.inflate(R.menu.delete, menu)
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            R.id.deleteAccount -> {
+                GlobalScope.launch(Dispatchers.IO) {
+                    val EmailUser = intent.getStringExtra("EXTRA_SESSION_ID")
+                    val db = DbPresenze.getDatabase(this@Profilo)
+                    if (EmailUser != null) {
+                        db.userDao().deleteByEmailUser(EmailUser)
+                    }
+                    startActivity(Intent(this@Profilo, MainActivity::class.java))
+            }
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 }

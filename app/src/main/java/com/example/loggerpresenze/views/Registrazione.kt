@@ -115,8 +115,14 @@ class Registrazione : AppCompatActivity() {
             if (password.length > 5 && repPassword == password) {
                 return true
             }
-            view.snack("Password minore di 5")
-            return false
+            if(password.length < 5 ) {
+                view.snack("Password minore di 5 ")
+                return false
+            }
+            else{
+                view.snack("Password diverse")
+                return false
+            }
         } else {
             view.snack("email errata o e' nel DB")
             return false

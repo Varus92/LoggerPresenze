@@ -25,7 +25,7 @@ fun Activity.transizioneToProfilo(activity: Context?) {
 }
 
 fun Activity.transizioneToStudenti(activity: Context?) {
-    val intent = Intent(activity,ListaStudenti::class.java)
+    val intent = Intent(activity,StudentiLista::class.java)
     startActivity(intent)
 }
 
